@@ -1,0 +1,19 @@
+<ng-container *ngIf="isRoleDefined">
+  <div *ngIf="adminRole; else notAdmin">
+    User is an Admin
+  </div>
+  <ng-template #notAdmin>
+    User is not an Admin
+  </ng-template>
+</ng-container>
+
+<app-content-projection>
+  This content is from app-component.
+
+  <p role>
+    This is selected content for roles.
+  </p>
+
+ 
+</app-content-projection>
+<!-- If we want to display the text only user is an admin else we have to show user is not an admin -->
